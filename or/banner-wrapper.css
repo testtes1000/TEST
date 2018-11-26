@@ -1,0 +1,19 @@
+div.banner-wrapper {
+  margin: 0 auto;
+  width: auto;height: auto;
+}
+
+div.banner-wrapper div {
+  float:left;
+  width: 250px;
+  margin-right: 5px;
+}
+div.banner-wrapper div:last-child {
+  margin-right: 0;
+}
+
+div.banner-wrapper a,
+div.banner-wrapper img {
+  border: 0;
+  height: auto;
+}

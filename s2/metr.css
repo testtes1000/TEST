@@ -1,0 +1,42 @@
+iframe {
+
+    padding: 2px;
+
+}
+
+.banner-center3 {
+    display: inline;
+    max-width: auto;
+    margin: auto ;
+    text-align: center;
+
+}
+
+.banner-center2 {
+    display: block;
+    max-width: auto;
+    margin: 0 auto 10px;
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+
+
+.banner-center {
+    display: block;
+    max-width: auto;
+    margin: 0 auto 10px;
+    text-align: center;
+    padding-top: 5px;
+
+}
+
+.banner-center img {
+
+    /* display: block; */
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding-right: 5px;
+
+}

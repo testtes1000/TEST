@@ -1,0 +1,452 @@
+<html><head><style class="vjs-styles-defaults">
+    .video-js {
+      width: 300px;
+      height: 150px;
+    }
+
+    .vjs-fluid {
+      padding-top: 56.25%
+    }
+  </style><style class="vjs-styles-dimensions">
+      .videol-dimensions {
+        width: 100px;
+        height: 100px;
+      }
+
+      .videol-dimensions.vjs-fluid {
+        padding-top: 56.25%;
+      }
+    </style>
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter28997365 = new Ya.Metrika({ id:28997365, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="//mc.yandex.ru/watch/28997365" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+	
+<meta name="RATING" content="RTA-5042-1996-1400-1577-RTA">
+    <style type="text/css">
+      body{
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+      #video{
+        width: 100%;
+        height: 100%;
+      }
+      img#vjs-logo {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+      }
+      .embed{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-family: VideoJS;
+        font-size: 20px;
+        color: #fff;
+        text-shadow: 0 0 3px #000;
+        opacity: 0.5;
+      }
+      .embed a{
+        color: #fff;
+        text-decoration: none;
+      }
+      .embed:hover{
+        opacity: 1.0;
+      }
+      #embed-hover{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: #fff;
+        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .close-embed{
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+      }
+      #embed-hover textarea{
+        font-size: 18px;
+        height: 120px;
+        width: 70%;
+        border: 0;
+        margin-bottom: 5px;
+      }
+      .embed-content{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+      }
+      .embed-content a{
+        text-decoration: none;
+        color: #fff;
+        text-shadow: 0 0 3px #000;
+      }
+      #parent{
+        position: relative;
+      }
+      #child{
+        width: 350px;
+        height: 350px;
+        text-align: center;
+        overflow: auto;
+        margin: auto;
+        top: 0; left: 0; bottom: 0; right: 0;
+        position: fixed;
+        z-index: 999;
+      }
+      .vjs-ads, 
+      .vjs-ads a{
+        color: #fff;
+        text-shadow: 0 0 3px #000;
+        text-decoration: none;
+      }
+      .vjs-icon{
+        vertical-align: middle;
+      }
+      .vjs-download{
+        margin-bottom: 20px;
+      }
+      .vjs-download a{
+        color: #fff;
+        text-shadow: none;
+        padding: 10px;
+        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 7px;
+        font-size: 12px;
+      }
+      #textarea, #vjs-ctrl-c{
+        visibility: hidden;
+      }
+      .vjs-suggested-video-endcap {
+        display: none;
+        height: 95%;
+        left: 0;
+        overflow: hidden;
+        padding-top: 10%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
+      .vjs-suggested-video-endcap.is-active {
+        display: block;
+      }
+      .vjs-suggested-video-endcap-container {
+        -webkit-align-content: center;
+        align-content: center;
+        -webkit-align-items: baseline;
+        align-items: baseline;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        justify-content: center;
+      }
+      .vjs-suggested-video-endcap-header {
+        font: 700 14px/1 Arial, sans-serif;
+        margin: 0 auto 20px;
+        text-align: center;
+      }
+      .vjs-suggested-video-endcap-link {
+        font: 400 12px/1 Arial, sans-serif;
+        margin: 10px;
+        position: relative;
+        width: 20%;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        text-shadow: 0 0 3px #000;
+        font-weight: bold;
+      }
+      .vjs-suggested-video-endcap-link:nth-of-type(4n),
+      .vjs-suggested-video-endcap-link:last-of-type {
+        margin-right: 0;
+      }
+      .vjs-suggested-video-endcap-img {
+        height: auto;
+        margin-bottom: 5px;
+        width: 100%;
+      }
+      .vjs-color:hover .vjs-big-play-button {
+        background-color: #ffffff;
+        background-color: rgba(255,255,255, 0.8);
+      }
+      .vjs-color {
+        color: #ffffff;
+      }
+      .vjs-color .vjs-control-bar, .vjs-color .vjs-big-play-button, .vjs-color .vjs-menu-content {
+        background-color: #ffffff;
+        background-color: rgba(255,255,255, 0.7);
+      }
+      .vjs-color .vjs-load-progress {
+        background-color: #ffffff;
+        background-color: rgba(255,255,255, 0.5);
+      }
+      .vjs-color .vjs-play-progress {
+        background-color: #ffffff;
+      }
+      .vjs-color .vjs-slider {
+        background-color: #ffffff;
+        background-color: rgba(255,255,255, 0.4);
+      }
+      .vjs-color .vjs-volume-level {
+        background-color: #ffffff;
+      }
+      .vjs-color .vjs-big-play-button,
+      .vjs-color .vjs-big-play-button:focus, .vjs-color:hover .vjs-big-play-button {
+        border-color: #ffffff;
+      }
+      .vjs-color .vjs-menu-button ul li.vjs-selected {
+        background-color: #ffffff;
+      }
+      .vjs-color .vjs-menu-button ul li:focus,
+      .vjs-color .vjs-menu-button ul li:hover,
+      .vjs-color .vjs-menu-button ul li.vjs-selected:focus,
+      .vjs-color .vjs-menu-button ul li.vjs-selected:hover {
+        color: #ffffff;
+        background-color: #ffffff;
+        background-color: rgba(255,255,255, 0.75);
+      }
+  #mensaje{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10000;
+    text-align: center;
+    padding: 20px; 
+    display: none;
+  }
+
+
+.play_button {
+  background-image:url(/play-button.png);
+  background-repeat:no-repeat;
+  width:30%;
+  height:30%;
+  position:absolute;
+  left:0%;
+  right:0%;
+  top:0%;
+  bottom:0%;
+  margin:auto;
+  background-size:contain;
+  background-position: center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.25s;
+}
+
+.play_button:hover, 
+.play_button:focus {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.video-box ul li iframe
+{
+display:none;
+vertical-align:middle;
+
+padding:5px;
+
+border-width:0px;
+border-style:none;
+border-color:transparent;
+
+}
+
+@media (min-width:992px){
+  .video-box ul li + li iframe {
+    display:block;
+    padding:5px;
+    width:310px;
+    height:260px;
+  }
+}
+
+@media (min-width:1024px){
+  .video-box ul li + li iframe {
+    width:310px;
+    height:260px;
+  }
+}
+
+@media (min-width:1200px){
+  .video-box ul li + li iframe {
+    width:310px;
+    height:260px;
+  }
+}
+
+
+
+.video-box ul li .frame-box
+{
+z-index:10;
+position:absolute;
+display:block;
+
+top:0em;
+left:0em;
+right:0em;
+bottom:0em;
+
+width:100%;
+height:100%;
+
+}
+
+
+.video-box ul li .frame-box-inner
+{
+position:relative;
+display:table-cell;
+
+vertical-align:middle;
+text-align:center;
+
+}
+
+
+.video-box ul li .frame-box-inner
+{
+width:730px;
+height:520px;
+}
+
+
+
+.video-box ul li .frame-box-content
+{
+position:relative;
+display:inline-block;
+
+padding:10px;
+
+background-image:none;
+background-color:#1e1e1e;
+background-repeat:repeat;
+background-position:0% 0%;
+
+-webkit-border-radius:3px;
+-khtml-border-radius:3px;
+-moz-border-radius:3px;
+-ms-border-radius:3px;
+-o-border-radius:3px;
+border-radius:3px;
+}
+
+.video-box ul li .frame-box-content iframe
+{
+width:310px;
+height:260px;
+}
+
+.video-box ul li .frame-box-close
+{
+z-index:11;
+position:absolute;
+display:block;
+
+top:-22px;
+right:-22px;
+
+width:45px;
+height:45px;
+
+background-color:transparent;
+background-repeat:repeat;
+background-position:0% 0%;
+
+cursor:pointer;
+}
+
+
+
+    </style>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script>
+  $(document).ready(function () {
+        $('.video').parent().click(function () {
+          if ($(this).children(".video").get(0).paused) {
+            $(".video").get(0).play();
+          } else {
+            $(".video").get(0).pause();
+          }
+        });
+        $(".video").on("play", function(){
+          $(".play_button").fadeOut(150);
+        });
+        $(".video").on("pause", function(){
+          $(".play_button").fadeIn(150);
+        });
+      });    
+    </script>
+
+  </head>
+  <body>
+
+<div id="Summ"><div id="parent">    <video class="video" width="100%" height="100%" controls="" preload="auto" poster="http://pic.vartuc.com/imgs/b/c/g/g/j/big_black_cock__resizing_a_tight_white_pussy-4_tmb.jpg" __idm_id__="646319105">      <source src="http://video2.xhcdn.com/key=kkkIZf+ioqg2WX-yJ2qg8w,end=1544601600,limit=3/data=151.237.183.76-dvp/speed=266k/initial_buffer=1212928/004/869/592/480p.h264.mp4" type="video/mp4">    </video> <div class="play_button" style=""></div></div></div>
+<div id="parentio">    
+
+    <script src="/video.min.js"></script>
+    <script type="text/javascript" src="/kt_player/player.php?id=1693687&amp;s=aTNnk6SZqhPJwrrd2RaOeA&amp;ts=1544597090&amp;ver=x"></script>
+    <script type="text/javascript">
+  videojs('video').ready(function() {
+    this.hotkeys({
+      volumeStep: 0.1,
+      seekStep: 10,
+      alwaysCaptureHotkeys: true
+    });
+  });
+    var isMobile = window.matchMedia("only screen and (max-width: 350px)");
+    if (isMobile.matches) {
+       $('.vjs-ads').hide();
+    }
+              $(document).ready(
+        function(){
+        $("#show-embed").click(function () {
+            $("#textarea, #vjs-ctrl-c").css('visibility', 'visible');
+            textarea.focus(); textarea.select();
+            return false;
+        });
+      });
+      function show(target) {
+          document.getElementById(target).style.display = 'table';
+      }
+      function hide(target) {
+          document.getElementById(target).style.display = 'none';
+      }
+      setTimeout(function() {
+          $('#child').fadeOut('fast');
+      }, 0); 
+    </script>
+      
+
+</div></body></html>
